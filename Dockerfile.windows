@@ -1,5 +1,5 @@
 ARG TAG
 FROM mcr.microsoft.com/windows/nanoserver:${TAG}
-COPY /trivy.exe /
+COPY trivy.exe /
 COPY contrib/*.tpl contrib/
 ENTRYPOINT ["/trivy.exe"]
