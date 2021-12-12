@@ -1,4 +1,7 @@
 project_name: trivy
+builds:
+- skip: true
+
 docker_manifests:
   - name_template: 'ollijanatuinen/trivy:latest'
     image_templates:
