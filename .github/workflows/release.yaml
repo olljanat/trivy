@@ -65,7 +65,7 @@ jobs:
         uses: goreleaser/goreleaser-action@v2
         with:
           version: v0.183.0
-          args: release --rm-dist
+          args: release --rm-dist --skip-announce
         env:
           GITHUB_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
       - name: Checkout trivy-repo
@@ -127,7 +127,7 @@ jobs:
         uses: goreleaser/goreleaser-action@v2
         with:
           version: v0.183.0
-          args: release --rm-dist --config goreleaser.windows.yml
+          args: release --rm-dist --skip-announce --config goreleaser.windows.yml
         env:
           GITHUB_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
   manifest:

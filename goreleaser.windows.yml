@@ -1,4 +1,7 @@
 project_name: trivy
+checksum:
+  disable: true
+
 builds:
   -
     main: cmd/trivy/main.go
