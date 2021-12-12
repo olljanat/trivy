@@ -56,7 +56,7 @@ jobs:
       #     registry: public.ecr.aws
       #     username: ${{ secrets.ECR_ACCESS_KEY_ID }}
       #     password: ${{ secrets.ECR_SECRET_ACCESS_KEY }}
-      # - name: Generate SBOM
+      - name: Generate SBOM
         uses: CycloneDX/gh-gomod-generate-sbom@v1
         with:
           args: mod -licenses -json -output bom.json
