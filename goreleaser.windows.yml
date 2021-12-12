@@ -42,6 +42,7 @@ dockers:
       # - "public.ecr.aws/aquasecurity/trivy:latest-amd64"
       # - "public.ecr.aws/aquasecurity/trivy:{{ .Version }}-amd64"
     use: docker
+    dockerfile: Dockerfile.windows
     goos: windows
     goarch: amd64
     ids:
@@ -55,58 +56,57 @@ dockers:
       - "--label=org.label-schema.build-date={{ .Date }}"
       - "--label=org.label-schema.vcs=https://github.com/aquasecurity/trivy"
       - "--label=org.label-schema.vcs-ref={{ .FullCommit }}"
-      - "--file=Dockerfile.windows"
       - "--build-arg=TAG=ltsc2022"
-  # - image_templates:
-  #     - "docker.io/ollijanatuinen/trivy:{{ .Version }}-win2019-amd64"
-  #     - "docker.io/ollijanatuinen/trivy:latest-win2019-amd64"
-  #     # - "docker.io/aquasec/trivy:{{ .Version }}-amd64"
-  #     # - "docker.io/aquasec/trivy:latest-amd64"
-  #     # - "ghcr.io/aquasecurity/trivy:{{ .Version }}-amd64"
-  #     # - "ghcr.io/aquasecurity/trivy:latest-amd64"
-  #     # - "public.ecr.aws/aquasecurity/trivy:latest-amd64"
-  #     # - "public.ecr.aws/aquasecurity/trivy:{{ .Version }}-amd64"
-  #   use: docker
-  #   goos: windows
-  #   goarch: amd64
-  #   ids:
-  #     - trivy
-  #   build_flag_templates:
-  #     - "--label=org.label-schema.schema-version=1.0"
-  #     - "--label=org.label-schema.name={{ .ProjectName }}"
-  #     - "--label=org.label-schema.description=A Fast Vulnerability Scanner for Containers"
-  #     - "--label=org.label-schema.vendor=Aqua Security"
-  #     - "--label=org.label-schema.version={{ .Version }}"
-  #     - "--label=org.label-schema.build-date={{ .Date }}"
-  #     - "--label=org.label-schema.vcs=https://github.com/aquasecurity/trivy"
-  #     - "--label=org.label-schema.vcs-ref={{ .FullCommit }}"
-  #     - "--file=Dockerfile.windows"
-  #     - "--build-arg=TAG=ltsc2019"
-  # - image_templates:
-  #     - "docker.io/ollijanatuinen/trivy:{{ .Version }}-win2016-amd64"
-  #     - "docker.io/ollijanatuinen/trivy:latest-win2016-amd64"
-  #     # - "docker.io/aquasec/trivy:{{ .Version }}-amd64"
-  #     # - "docker.io/aquasec/trivy:latest-amd64"
-  #     # - "ghcr.io/aquasecurity/trivy:{{ .Version }}-amd64"
-  #     # - "ghcr.io/aquasecurity/trivy:latest-amd64"
-  #     # - "public.ecr.aws/aquasecurity/trivy:latest-amd64"
-  #     # - "public.ecr.aws/aquasecurity/trivy:{{ .Version }}-amd64"
-  #   use: docker
-  #   goos: windows
-  #   goarch: amd64
-  #   ids:
-  #     - trivy
-  #   build_flag_templates:
-  #     - "--label=org.label-schema.schema-version=1.0"
-  #     - "--label=org.label-schema.name={{ .ProjectName }}"
-  #     - "--label=org.label-schema.description=A Fast Vulnerability Scanner for Containers"
-  #     - "--label=org.label-schema.vendor=Aqua Security"
-  #     - "--label=org.label-schema.version={{ .Version }}"
-  #     - "--label=org.label-schema.build-date={{ .Date }}"
-  #     - "--label=org.label-schema.vcs=https://github.com/aquasecurity/trivy"
-  #     - "--label=org.label-schema.vcs-ref={{ .FullCommit }}"
-  #     - "--file=Dockerfile.windows"
-  #     - "--build-arg=TAG=ltsc2016"
+  - image_templates:
+      - "docker.io/ollijanatuinen/trivy:{{ .Version }}-win2019-amd64"
+      - "docker.io/ollijanatuinen/trivy:latest-win2019-amd64"
+      # - "docker.io/aquasec/trivy:{{ .Version }}-amd64"
+      # - "docker.io/aquasec/trivy:latest-amd64"
+      # - "ghcr.io/aquasecurity/trivy:{{ .Version }}-amd64"
+      # - "ghcr.io/aquasecurity/trivy:latest-amd64"
+      # - "public.ecr.aws/aquasecurity/trivy:latest-amd64"
+      # - "public.ecr.aws/aquasecurity/trivy:{{ .Version }}-amd64"
+    use: docker
+    dockerfile: Dockerfile.windows
+    goos: windows
+    goarch: amd64
+    ids:
+      - trivy
+    build_flag_templates:
+      - "--label=org.label-schema.schema-version=1.0"
+      - "--label=org.label-schema.name={{ .ProjectName }}"
+      - "--label=org.label-schema.description=A Fast Vulnerability Scanner for Containers"
+      - "--label=org.label-schema.vendor=Aqua Security"
+      - "--label=org.label-schema.version={{ .Version }}"
+      - "--label=org.label-schema.build-date={{ .Date }}"
+      - "--label=org.label-schema.vcs=https://github.com/aquasecurity/trivy"
+      - "--label=org.label-schema.vcs-ref={{ .FullCommit }}"
+      - "--build-arg=TAG=ltsc2019"
+  - image_templates:
+      - "docker.io/ollijanatuinen/trivy:{{ .Version }}-win2016-amd64"
+      - "docker.io/ollijanatuinen/trivy:latest-win2016-amd64"
+      # - "docker.io/aquasec/trivy:{{ .Version }}-amd64"
+      # - "docker.io/aquasec/trivy:latest-amd64"
+      # - "ghcr.io/aquasecurity/trivy:{{ .Version }}-amd64"
+      # - "ghcr.io/aquasecurity/trivy:latest-amd64"
+      # - "public.ecr.aws/aquasecurity/trivy:latest-amd64"
+      # - "public.ecr.aws/aquasecurity/trivy:{{ .Version }}-amd64"
+    use: docker
+    dockerfile: Dockerfile.windows
+    goos: windows
+    goarch: amd64
+    ids:
+      - trivy
+    build_flag_templates:
+      - "--label=org.label-schema.schema-version=1.0"
+      - "--label=org.label-schema.name={{ .ProjectName }}"
+      - "--label=org.label-schema.description=A Fast Vulnerability Scanner for Containers"
+      - "--label=org.label-schema.vendor=Aqua Security"
+      - "--label=org.label-schema.version={{ .Version }}"
+      - "--label=org.label-schema.build-date={{ .Date }}"
+      - "--label=org.label-schema.vcs=https://github.com/aquasecurity/trivy"
+      - "--label=org.label-schema.vcs-ref={{ .FullCommit }}"
+      - "--build-arg=TAG=ltsc2016"
 
 docker_manifests:
   - name_template: 'ollijanatuinen/trivy:{{ .Version }}-windows'
