@@ -1,0 +1,4 @@
+ARG TAG
+FROM mcr.microsoft.com/windows/nanoserver:${TAG}
+COPY /trivy.exe /
+ENTRYPOINT ["/trivy.exe"]
