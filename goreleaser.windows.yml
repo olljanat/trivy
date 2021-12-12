@@ -51,7 +51,7 @@ dockers:
       - "--label=org.label-schema.vcs-ref={{ .FullCommit }}"
       - "--build-arg=TAG=ltsc2022"
     extra_files:
-    - foo/
+    - /*.tpl
   - image_templates:
       - "docker.io/ollijanatuinen/trivy:{{ .Version }}-win2019"
       - "docker.io/ollijanatuinen/trivy:latest-win2019"
@@ -76,4 +76,4 @@ dockers:
       - "--label=org.label-schema.vcs-ref={{ .FullCommit }}"
       - "--build-arg=TAG=1809"
     extra_files:
-    - foo/
+    - /*.tpl
