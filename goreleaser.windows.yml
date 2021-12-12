@@ -35,10 +35,10 @@ dockers:
   - image_templates:
       - "docker.io/aquasec/trivy:{{ .Version }}-win2022"
       - "docker.io/aquasec/trivy:latest-win2022"
-      - "ghcr.io/aquasecurity/trivy:{{ .Version }}-win2022"
-      - "ghcr.io/aquasecurity/trivy:latest-win2022"
-      - "public.ecr.aws/aquasecurity/trivy:latest-win2022"
-      - "public.ecr.aws/aquasecurity/trivy:{{ .Version }}-win2022"
+      # - "ghcr.io/aquasecurity/trivy:{{ .Version }}-win2022"
+      # - "ghcr.io/aquasecurity/trivy:latest-win2022"
+      # - "public.ecr.aws/aquasecurity/trivy:latest-win2022"
+      # - "public.ecr.aws/aquasecurity/trivy:{{ .Version }}-win2022"
     use: docker
     dockerfile: Dockerfile.windows
     goos: windows
@@ -58,10 +58,10 @@ dockers:
   - image_templates:
       - "docker.io/aquasec/trivy:{{ .Version }}-win2019"
       - "docker.io/aquasec/trivy:latest-win2019"
-      - "ghcr.io/aquasecurity/trivy:{{ .Version }}-win2019"
-      - "ghcr.io/aquasecurity/trivy:latest-win2019"
-      - "public.ecr.aws/aquasecurity/trivy:latest-win2019"
-      - "public.ecr.aws/aquasecurity/trivy:{{ .Version }}-win2019"
+      # - "ghcr.io/aquasecurity/trivy:{{ .Version }}-win2019"
+      # - "ghcr.io/aquasecurity/trivy:latest-win2019"
+      # - "public.ecr.aws/aquasecurity/trivy:latest-win2019"
+      # - "public.ecr.aws/aquasecurity/trivy:{{ .Version }}-win2019"
     use: docker
     dockerfile: Dockerfile.windows
     goos: windows
