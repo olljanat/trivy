@@ -64,7 +64,7 @@ jobs:
       - name: Release
         uses: goreleaser/goreleaser-action@v2
         with:
-          version: v1.1.0
+          version: v0.183.0
           args: release --rm-dist
         env:
           GITHUB_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
@@ -126,7 +126,7 @@ jobs:
       - name: Release
         uses: goreleaser/goreleaser-action@v2
         with:
-          version: v1.1.0
+          version: v0.183.0
           args: release --rm-dist --config goreleaser.windows.yml
         env:
           GITHUB_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
@@ -140,7 +140,7 @@ jobs:
       - name: Release
         uses: goreleaser/goreleaser-action@v2
         with:
-          version: v1.1.0
+          version: v0.183.0
           args: release --config goreleaser.manifests.yml
         env:
           GITHUB_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
