@@ -61,11 +61,14 @@ jobs:
       #   with:
       #     args: mod -licenses -json -output bom.json
       #     version: ^v1
+      - name: Use Windows config
+        run: |
+          Copy-Item -Path goreleaser.windows.yml -Destination goreleaser.yml -Force
       - name: Release
         uses: goreleaser/goreleaser-action@v2
         with:
           version: v0.183.0
-          args: release --rm-dist --config goreleaser.windows.yml
+          args: release --rm-dist
         env:
           GITHUB_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
       - name: Checkout trivy-repo
