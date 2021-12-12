@@ -31,17 +31,6 @@ archives:
       - LICENSE
       - contrib/*.tpl
 
-
-brews:
-  -
-    tap:
-      owner: aquasecurity
-      name: homebrew-trivy
-    homepage: "https://github.com/aquasecurity/trivy"
-    description: "Scanner for vulnerabilities in container images, file systems, and Git repositories, as well as for configuration issues"
-    test: |
-      system "#{bin}/trivy", "--version"
-
 dockers:
   - image_templates:
       - "docker.io/ollijanatuinen/trivy:{{ .Version }}-amd64"
