@@ -57,8 +57,8 @@ dockers:
       - "--label=org.label-schema.vcs-ref={{ .FullCommit }}"
       - "--platform=windows/amd64"
       - "--file Dockerfile.windows"
-    extra_files:
-    - contrib/
+    # extra_files:
+    # - contrib/
 
 docker_manifests:
   - name_template: 'ollijanatuinen/trivy:{{ .Version }}'
