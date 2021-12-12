@@ -1,0 +1,63 @@
+project_name: trivy
+builds:
+  -
+    main: cmd/trivy/main.go
+    binary: trivy
+    ldflags:
+      - -s -w
+      - "-extldflags '-static'"
+      - -X main.version={{.Version}}
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - freebsd
+      - openbsd
+    goarch:
+      - amd64
+      - 386
+      - arm
+      - arm64
+      - ppc64le
+      - s390x
+    goarm:
+      - 7
+    ignore:
+      - goos: darwin
+        goarch: 386
+
+release:
+    extra_files:
+      - glob: ./bom.json
+    discussion_category_name: Announcements
+
+archives:
+  -
+    format: tar.gz
+    name_template: "{{.ProjectName}}_{{.Version}}_{{.Os}}-{{.Arch}}"
+    replacements:
+      amd64: 64bit
+      386: 32bit
+      arm: ARM
+      arm64: ARM64
+      ppc64le: PPC64LE
+      darwin: macOS
+      openbsd: OpenBSD
+      netbsd: NetBSD
+      freebsd: FreeBSD
+      dragonfly: DragonFlyBSD
+    files:
+      - README.md
+      - LICENSE
+      - contrib/*.tpl
+
+
+brews:
+  -
+    tap:
+      owner: aquasecurity
+      name: homebrew-trivy
+    homepage: "https://github.com/aquasecurity/trivy"
+    description: "Scanner for vulnerabilities in container images, file systems, and Git repositories, as well as for configuration issues"
+    test: |
+      system "#{bin}/trivy", "--version"

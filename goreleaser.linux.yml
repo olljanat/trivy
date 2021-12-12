@@ -10,10 +10,7 @@ builds:
     env:
       - CGO_ENABLED=0
     goos:
-      - darwin
       - linux
-      - freebsd
-      - openbsd
     goarch:
       - amd64
       - 386
@@ -23,9 +20,6 @@ builds:
       - s390x
     goarm:
       - 7
-    ignore:
-      - goos: darwin
-        goarch: 386
 
 release:
     extra_files:
@@ -49,12 +43,7 @@ nfpms:
       arm: ARM
       arm64: ARM64
       ppc64le: PPC64LE
-      darwin: macOS
       linux: Linux
-      openbsd: OpenBSD
-      netbsd: NetBSD
-      freebsd: FreeBSD
-      dragonfly: DragonFlyBSD
     contents:
      - src: contrib/*.tpl
        dst: /usr/local/share/trivy/templates
@@ -69,12 +58,7 @@ archives:
       arm: ARM
       arm64: ARM64
       ppc64le: PPC64LE
-      darwin: macOS
       linux: Linux
-      openbsd: OpenBSD
-      netbsd: NetBSD
-      freebsd: FreeBSD
-      dragonfly: DragonFlyBSD
     files:
       - README.md
       - LICENSE
