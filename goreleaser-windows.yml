@@ -1,0 +1,9 @@
+project_name: trivy
+docker_manifests:
+  - name_template: 'ollijanatuinen/trivy:latest'
+    image_templates:
+    - 'aquasec/trivy:0.21.2-amd64'
+    - 'aquasec/trivy:0.21.2-arm64'
+    - 'ollijanatuinen/trivy:0.99-win9-win2022-amd64'
+    - 'ollijanatuinen/trivy:0.99-win9-win2019-amd64'
+    - 'ollijanatuinen/trivy:0.99-win9-win2016-amd64'

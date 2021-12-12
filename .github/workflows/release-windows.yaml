@@ -1,0 +1,31 @@
+name: Docker Manifest
+on:
+  push:
+    tags:
+      - "v*"
+env:
+  GO_VERSION: "1.17"
+  GH_USER: "aqua-bot"
+jobs:
+  release:
+    name: Docker Manifest
+    runs-on: ubuntu-20.04
+    env:
+      DOCKER_CLI_EXPERIMENTAL: "enabled"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Login to docker.io registry
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USER }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Release
+        uses: goreleaser/goreleaser-action@v2
+        with:
+          version: v0.183.0
+          args: release --rm-dist --config goreleaser.windows.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
