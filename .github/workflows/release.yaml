@@ -137,10 +137,13 @@ jobs:
     steps:
       - name: Install dependencies
         run: |
-          sudo dpkg --add-architecture armhf
           sudo apt-get -y update
-          sudo apt-get -y install rpm reprepro distro-info \
-            libc6:armhf libstdc++6:armhf
+          sudo apt-get -y install rpm reprepro distro-info
+      - name: Install ARM32 dependencies
+        run: |
+          echo "deb http://http://archive.canonical.com/ubuntu/ focal partner" > /etc/apt/sources.list
+          sudo dpkg --add-architecture armhf
+          sudo apt-get -y install libc6:armhf libstdc++6:armhf
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
