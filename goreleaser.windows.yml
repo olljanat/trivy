@@ -14,11 +14,6 @@ builds:
     goarch:
       - amd64
 
-release:
-    extra_files:
-      - glob: ./bom.json
-    discussion_category_name: Announcements
-
 archives:
   -
     format: tar.gz
