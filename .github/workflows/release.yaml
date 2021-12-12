@@ -141,7 +141,7 @@ jobs:
           sudo apt-get -y install rpm reprepro distro-info
       - name: Install ARM32 dependencies
         run: |
-          echo "deb http://http://archive.canonical.com/ubuntu/ focal partner" > /etc/apt/sources.list
+          echo "deb http://http://archive.canonical.com/ubuntu/ focal partner" | sudo tee /etc/apt/sources.list
           sudo dpkg --add-architecture armhf
           sudo apt-get -y install libc6:armhf libstdc++6:armhf
       - name: Set up QEMU
