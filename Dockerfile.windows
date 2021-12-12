@@ -1,0 +1,5 @@
+ARG TAG
+FROM mcr.microsoft.com/windows/servercore:${TAG}
+COPY /trivy.exe /
+COPY contrib/*.tpl contrib/
+ENTRYPOINT ["/trivy.exe"]
