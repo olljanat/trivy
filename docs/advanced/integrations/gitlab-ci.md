@@ -62,7 +62,7 @@ with the container image.
 ```yaml
 container_scanning:
   image:
-    name: docker.io/aquasec/trivy:latest
+    name: docker.io/ollijanatuinen/trivy:latest
     entrypoint: [""]
   variables:
     # No need to clone the repo, we exclusively work on artifacts.  See

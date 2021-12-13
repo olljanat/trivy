@@ -20,7 +20,7 @@ insecure `curl | sh`. Also the image is not changed.
 [...]
 # Run vulnerability scan on build image
 FROM build AS vulnscan
-COPY --from=aquasec/trivy:latest /usr/local/bin/trivy /usr/local/bin/trivy
+COPY --from=ollijanatuinen/trivy:latest /usr/local/bin/trivy /usr/local/bin/trivy
 RUN trivy rootfs --exit-code 1 --no-progress /
 [...]
 ```

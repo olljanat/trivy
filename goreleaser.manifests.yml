@@ -3,15 +3,15 @@ builds:
 - skip: true
 
 docker_manifests:
-  - name_template: 'aquasec/trivy:{{ .Version }}'
+  - name_template: 'ollijanatuinen/trivy:{{ .Version }}'
     image_templates:
-    - 'aquasec/trivy:{{ .Version }}-amd64'
-    - 'aquasec/trivy:{{ .Version }}-arm64'
-    - 'aquasec/trivy:{{ .Version }}-win2016'
-    - 'aquasec/trivy:{{ .Version }}-win2019'
-    - 'aquasec/trivy:{{ .Version }}-win-sa2004'
-    - 'aquasec/trivy:{{ .Version }}-win-sa20H2'
-    - 'aquasec/trivy:{{ .Version }}-win2022'
+    - 'ollijanatuinen/trivy:{{ .Version }}-amd64'
+    - 'ollijanatuinen/trivy:{{ .Version }}-arm64'
+    - 'ollijanatuinen/trivy:{{ .Version }}-win2016'
+    - 'ollijanatuinen/trivy:{{ .Version }}-win2019'
+    - 'ollijanatuinen/trivy:{{ .Version }}-win-sa2004'
+    - 'ollijanatuinen/trivy:{{ .Version }}-win-sa20H2'
+    - 'ollijanatuinen/trivy:{{ .Version }}-win2022'
   # - name_template: 'ghcr.io/aquasecurity/trivy:{{ .Version }}'
   #   image_templates:
   #   - 'ghcr.io/aquasecurity/trivy:{{ .Version }}-amd64'
@@ -30,15 +30,15 @@ docker_manifests:
   #   - 'public.ecr.aws/aquasecurity/trivy:{{ .Version }}-win-sa2004'
   #   - 'public.ecr.aws/aquasecurity/trivy:{{ .Version }}-win-sa20H2'
   #   - 'public.ecr.aws/aquasecurity/trivy:{{ .Version }}-win2022'
-  - name_template: 'aquasec/trivy:latest'
+  - name_template: 'ollijanatuinen/trivy:latest'
     image_templates:
-    - 'aquasec/trivy:{{ .Version }}-amd64'
-    - 'aquasec/trivy:{{ .Version }}-arm64'
-    - 'aquasec/trivy:{{ .Version }}-win2016'
-    - 'aquasec/trivy:{{ .Version }}-win2019'
-    - 'aquasec/trivy:{{ .Version }}-win-sa2004'
-    - 'aquasec/trivy:{{ .Version }}-win-sa20H2'
-    - 'aquasec/trivy:{{ .Version }}-win2022'
+    - 'ollijanatuinen/trivy:{{ .Version }}-amd64'
+    - 'ollijanatuinen/trivy:{{ .Version }}-arm64'
+    - 'ollijanatuinen/trivy:{{ .Version }}-win2016'
+    - 'ollijanatuinen/trivy:{{ .Version }}-win2019'
+    - 'ollijanatuinen/trivy:{{ .Version }}-win-sa2004'
+    - 'ollijanatuinen/trivy:{{ .Version }}-win-sa20H2'
+    - 'ollijanatuinen/trivy:{{ .Version }}-win2022'
   # - name_template: 'ghcr.io/aquasecurity/trivy:latest'
   #   image_templates:
   #   - 'ghcr.io/aquasecurity/trivy:{{ .Version }}-amd64'

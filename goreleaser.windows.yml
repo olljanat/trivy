@@ -31,8 +31,8 @@ archives:
 
 dockers:
   - image_templates:
-      - "docker.io/aquasec/trivy:{{ .Version }}-win2016"
-      - "docker.io/aquasec/trivy:latest-win2016"
+      - "docker.io/ollijanatuinen/trivy:{{ .Version }}-win2016"
+      - "docker.io/ollijanatuinen/trivy:latest-win2016"
       - "ghcr.io/aquasecurity/trivy:{{ .Version }}-win2016"
       - "ghcr.io/aquasecurity/trivy:latest-win2016"
       - "public.ecr.aws/aquasecurity/trivy:latest-win2016"
@@ -56,8 +56,8 @@ dockers:
     # extra_files:
     # - contrib/
   - image_templates:
-      - "docker.io/aquasec/trivy:{{ .Version }}-win2019"
-      - "docker.io/aquasec/trivy:latest-win2019"
+      - "docker.io/ollijanatuinen/trivy:{{ .Version }}-win2019"
+      - "docker.io/ollijanatuinen/trivy:latest-win2019"
       - "ghcr.io/aquasecurity/trivy:{{ .Version }}-win2019"
       - "ghcr.io/aquasecurity/trivy:latest-win2019"
       - "public.ecr.aws/aquasecurity/trivy:latest-win2019"
@@ -81,8 +81,8 @@ dockers:
     # extra_files:
     # - contrib/
   - image_templates:
-      - "docker.io/aquasec/trivy:{{ .Version }}-win-sa2004"
-      - "docker.io/aquasec/trivy:latest-win-sa2004"
+      - "docker.io/ollijanatuinen/trivy:{{ .Version }}-win-sa2004"
+      - "docker.io/ollijanatuinen/trivy:latest-win-sa2004"
       - "ghcr.io/aquasecurity/trivy:{{ .Version }}-win-sa2004"
       - "ghcr.io/aquasecurity/trivy:latest-win-sa2004"
       - "public.ecr.aws/aquasecurity/trivy:latest-win-sa2004"
@@ -106,8 +106,8 @@ dockers:
     # extra_files:
     # - contrib/
   - image_templates:
-      - "docker.io/aquasec/trivy:{{ .Version }}-win-sa20H2"
-      - "docker.io/aquasec/trivy:latest-win-sa20H2"
+      - "docker.io/ollijanatuinen/trivy:{{ .Version }}-win-sa20H2"
+      - "docker.io/ollijanatuinen/trivy:latest-win-sa20H2"
       - "ghcr.io/aquasecurity/trivy:{{ .Version }}-win-sa20H2"
       - "ghcr.io/aquasecurity/trivy:latest-win-sa20H2"
       - "public.ecr.aws/aquasecurity/trivy:latest-win-sa20H2"
@@ -131,8 +131,8 @@ dockers:
     # extra_files:
     # - contrib/
   - image_templates:
-      - "docker.io/aquasec/trivy:{{ .Version }}-win2022"
-      - "docker.io/aquasec/trivy:latest-win2022"
+      - "docker.io/ollijanatuinen/trivy:{{ .Version }}-win2022"
+      - "docker.io/ollijanatuinen/trivy:latest-win2022"
       - "ghcr.io/aquasecurity/trivy:{{ .Version }}-win2022"
       - "ghcr.io/aquasecurity/trivy:latest-win2022"
       - "public.ecr.aws/aquasecurity/trivy:latest-win2022"

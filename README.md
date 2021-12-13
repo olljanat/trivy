@@ -206,7 +206,7 @@ Contact us about any matter by opening a GitHub Discussion [here][discussions]
 [release]: https://github.com/aquasecurity/trivy/releases
 [release-img]: https://img.shields.io/github/release/aquasecurity/trivy.svg?logo=github
 [github-all-releases-img]: https://img.shields.io/github/downloads/aquasecurity/trivy/total?logo=github
-[docker-pulls]: https://img.shields.io/docker/pulls/aquasec/trivy?logo=docker&label=docker%20pulls%20%2F%20trivy
+[docker-pulls]: https://img.shields.io/docker/pulls/ollijanatuinen/trivy?logo=docker&label=docker%20pulls%20%2F%20trivy
 [license]: https://github.com/aquasecurity/trivy/blob/main/LICENSE
 [license-img]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
 

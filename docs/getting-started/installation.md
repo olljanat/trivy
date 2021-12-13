@@ -110,7 +110,7 @@ go install
 Replace [YOUR_CACHE_DIR] with the cache directory on your machine.
 
 ```bash
-docker pull aquasec/trivy:{{ git.tag[1:] }}
+docker pull ollijanatuinen/trivy:{{ git.tag[1:] }}
 ```
 
 Example:
@@ -118,24 +118,24 @@ Example:
 === "Linux"
 
     ``` bash
-    docker run --rm -v [YOUR_CACHE_DIR]:/root/.cache/ aquasec/trivy:{{ git.tag[1:] }} [YOUR_IMAGE_NAME]
+    docker run --rm -v [YOUR_CACHE_DIR]:/root/.cache/ ollijanatuinen/trivy:{{ git.tag[1:] }} [YOUR_IMAGE_NAME]
     ```
 
 === "macOS"
 
     ``` bash
     yay -Sy trivy-bin
-    docker run --rm -v $HOME/Library/Caches:/root/.cache/ aquasec/trivy:{{ git.tag[1:] }} python:3.4-alpine
+    docker run --rm -v $HOME/Library/Caches:/root/.cache/ ollijanatuinen/trivy:{{ git.tag[1:] }} python:3.4-alpine
     ```
 
 If you would like to scan the image on your host machine, you need to mount `docker.sock`.
 
 ```bash
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
-    -v $HOME/Library/Caches:/root/.cache/ aquasec/trivy:{{ git.tag[1:] }} python:3.4-alpine
+    -v $HOME/Library/Caches:/root/.cache/ ollijanatuinen/trivy:{{ git.tag[1:] }} python:3.4-alpine
 ```
 
-Please re-pull latest `aquasec/trivy` if an error occurred.
+Please re-pull latest `ollijanatuinen/trivy` if an error occurred.
 
 <details>
 <summary>Result</summary>
