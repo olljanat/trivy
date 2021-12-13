@@ -33,10 +33,10 @@ dockers:
   - image_templates:
       - "docker.io/ollijanatuinen/trivy:{{ .Version }}-win2016"
       - "docker.io/ollijanatuinen/trivy:latest-win2016"
-      - "ghcr.io/aquasecurity/trivy:{{ .Version }}-win2016"
-      - "ghcr.io/aquasecurity/trivy:latest-win2016"
-      - "public.ecr.aws/aquasecurity/trivy:latest-win2016"
-      - "public.ecr.aws/aquasecurity/trivy:{{ .Version }}-win2016"
+      # - "ghcr.io/aquasecurity/trivy:{{ .Version }}-win2016"
+      # - "ghcr.io/aquasecurity/trivy:latest-win2016"
+      # - "public.ecr.aws/aquasecurity/trivy:latest-win2016"
+      # - "public.ecr.aws/aquasecurity/trivy:{{ .Version }}-win2016"
     use: docker
     dockerfile: Dockerfile.windows
     goos: windows
