@@ -49,7 +49,12 @@ jobs:
 
   integration:
     name: Integration Test
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-2022
     steps:
     - name: Set up Go
       uses: actions/setup-go@v3
